@@ -3,7 +3,7 @@
 import './outer-website.css'
 
 // The AR content to load in the iframe.
-const INNER_FRAME_URL = 'https://lightlegacy.8thwall.app/simplemodelplacement/?f=1&signed=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjY1OTQ4NjAsImV4cCI6MTY2NjU5NTIyMCwic3ViIjoic2lnbmVkIiwiYXBwS2V5Ijoid2Q0MzNEV2hpb1BaOUFXOTR6MzgwR2FOQUlWVmxLNjlDbk5BM3gxVVhscWh4MkY4VWZlbkxNMkc4VnFHckpORVE5RnBtRyJ9.VXXFW9MXoCuhkAef58rDos3ZJQZF5LJ5jI93AjW6g0E'
+const INNER_FRAME_URL = 'https://lightlegacy.8thwall.app/simplemodelplacement/'
 
 // User control elements for the iframe AR experience.
 const IFRAME_ID = 'my-iframe'  // iframe containing AR content.
