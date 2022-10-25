@@ -12,7 +12,11 @@
 
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: scroll;'>
-  <a-scene>
+  <a-scene xrextras-gesture-detector
+  xrextras-loading
+  xrextras-runtime-error
+  renderer="colorManagement: true"
+  xrweb>
     <a-assets>
     <a-asset-item id="car" src="./Robot_arm.glb"></a-asset-item>
       <a-asset-item id="car-transparent" src="./Robot_arm.glb"></a-asset-item>
