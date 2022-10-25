@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <script src="./app.js"></script>
 <script src="//cdn.8thwall.com/web/iframe/iframe.js"></script>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
 </head>
 <!-- OUTER WEBSITE: body.html is the outer page. -->
 
@@ -17,7 +19,11 @@
   <div class="grid-item" style="background-color:#F15B24;">
     <h1>Visualize Learning</h1>
   </div>
-  
+  <a-scene physics>
+      <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
   <div class="grid-item" style="padding-left: 1em">
     <img src="./outer-website-assets/profile-icon.svg">
   </div>
