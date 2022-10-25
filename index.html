@@ -30,65 +30,7 @@
   
   <p class="author">Zionext LeARn</p>
   
-  <!-- time stamp -->
-  <p id="date"><br></p>
-  
-  <p>
-  <h3>What is Augmented Reality (AR)?</h3><br>
-  Augmented Reality is an immersive technology that superimposes a computer-generated image on a user's view of the real world, thus providing a rich composite view objects that exist in the real-world are augmented by virtual objects or supplement with information. AR can be used to enhance the learning experience of students by providing them with an immersive and engaging environment.
-  </p>
-  
-</div>
-
-<!-- AR iframe -->
-<div id="inline-ar">
-  <button id="startBtn" onClick="startAR()">
-    <img src="./outer-website-assets/start-ar-banner.svg">
-  </button>
-  <img id="poweredByLogo" src="./outer-website-assets/Znx_logo.png">
-  <div id="iframeControls">
-    <button id="expandBtn" onClick="toggleFullscreen()">
-      <div id="expandImg"></div>
-    </button>
-    <button id="stopBtn" onClick=="stopAR()">
-      <div id="stopImg"></div>
-    </button>
-  </div>
-  <iframe
-    id="my-iframe"
-    allow="camera;gyroscope;accelerometer;magnetometer;xr-spatial-tracking;">
-  </iframe>
-</div>
-
-<div class="content">
-
-  <p>
-  <h3>Why Augmented Reality?</h3><br>
-  Augmented Reality has been found to be more effective in engaging students as compared to traditional methods of teaching. With AR, students are able to interact with virtual objects and learn in a more immersive and stimulating environment. In addition, AR can also help to improve student's comprehension and retention of information.</p> 
-</div>
-
-<div class="content">
-
-  <p>
-  <h3>Strategic Benefits of AR Development</h3><br>
-  <h2>Creates Unique Customer Experiences</h2>
-The most significant advantage of AR is that it creates unique digital experiences that merge the best of both worlds - physical and digital. It does not require any specialized hardware or software to enjoy it. Most people use smartphones and mobile apps to experience AR. The most recent advancements in AR have allowed for immersive experiences using just a web browser.
-So, what are the most important distinctions between AR experiences and other types of entertainment? Most of the audio-visual activities that we are familiar with exist in one world or the other. While the activities could be engaging, it is still a passive consumption of the information. For one thing, augmented reality mixes both realities together. It generates a false appearance by layering digital components on top of physical ones, creating a mirage effect.
-Imagine being able to experience all your favourite learning contents, from the safety and comfort of home and these experiences can be brought into reality with just one touch! With AR apps you can now immerse in both physical surroundings as well as digital information simultaneously.
-</div>
-<div id="overlay" style="z-index: 2">
-  <h3>Tap to place Robot Arm</h3>
-  <h3>Hold and Drag to move it</h3>
-</div>
-<!-- Add the tap-place component to the scene so it has an effect -->
-<a-scene iframe-inner
-  xrextras-gesture-detector
-  xrextras-loading
-  xrextras-runtime-error
-  renderer="colorManagement: true"
-  xrweb>
-
-  <a-assets>
+    <a-assets>
     <a-asset-item id="car" src="./Robot_arm.glb"></a-asset-item>
     <a-asset-item id="car-transparent" src="./Robot_arm.glb"></a-asset-item>
   </a-assets>
