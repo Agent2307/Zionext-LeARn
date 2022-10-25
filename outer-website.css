@@ -59,7 +59,7 @@
 #stopImg {
   width: 30px;
   height: 30px;
-  background-image: url(./assets/outer-website-assets/close-icon.svg);
+  background-image: url(./outer-website-assets/close-icon.svg);
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
   background-size: cover;
 }
@@ -81,7 +81,7 @@
 #expandImg {
   width: 30px;
   height: 30px;
-  background-image: url(./assets/outer-website-assets/expand-icon.svg);
+  background-image: url(./outer-website-assets/expand-icon.svg);
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
   background-size: cover;
 }
@@ -115,7 +115,7 @@
 }
 
 .fullscreen-btn #expandImg {
-  background-image: url(./assets/outer-website-assets/shrink-icon.svg) !important;
+  background-image: url(./outer-website-assets/shrink-icon.svg) !important;
 }
 
 .hidden {
