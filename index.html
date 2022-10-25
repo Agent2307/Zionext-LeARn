@@ -6,7 +6,20 @@
   <a-scene embedded arjs>
     <a-assets>
     <a-asset-item id="car" src="./Robot_arm.glb"></a-asset-item>
+      <a-asset-item id="car-transparent" src="assets/Robot_arm.glb"></a-asset-item>
       </a-assets>
+    <a-entity 
+    id="cursor"
+    tap-place-cursor
+    gltf-model="#car-transparent"
+    scale="5 5 5"
+    cubemap-static>
+      <a-plane
+        rotation="-90 0 0"
+        scale="1.6 3.3 1"
+        material="src: #icon; opacity: 0.5; roughness: 0.8; metalness: 0;">
+      </a-plane>
+  </a-entity>
      <a-camera
     id="camera"
     position="0 8 0"
