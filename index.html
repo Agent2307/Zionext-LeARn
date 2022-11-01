@@ -13,8 +13,17 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
+	<div id="overlay" style="z-index: 2">
+  <h3>Tap to place Robot Arm</h3>
+  <h3>Hold and Drag to move it</h3>
+</div>
     <a-scene
-        vr-mode-ui="enabled: false"
+  xrextras-gesture-detector
+  xrextras-loading
+  xrextras-runtime-error
+  renderer="colorManagement: true"
+  xrweb
+        vr-mode-ui="enabled: yes"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         
