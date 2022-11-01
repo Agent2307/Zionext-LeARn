@@ -18,6 +18,70 @@
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         
-        <a-camera gps-camera rotation-reader></a-camera>
+    <a-assets>
+    <a-asset-item id="car" src="assets/Robot_arm.glb"></a-asset-item>
+    <a-asset-item id="car-transparent" src="assets/Robot_arm.glb"></a-asset-item>
+    <img id="icon" src="./assets/images/rectangle-icon.png">
+    <img id="posx" src="./assets/images/posx.jpg">
+    <img id="posy" src="./assets/images/posy.jpg">
+    <img id="posz" src="./assets/images/posz.jpg">
+    <img id="negx" src="./assets/images/negx.jpg">
+    <img id="negy" src="./assets/images/negy.jpg">
+    <img id="negz" src="./assets/images/negz.jpg">
+  </a-assets>
+
+  <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
+  <a-camera
+    id="camera"
+    position="0 8 0"
+    cursor="fuse: false; rayOrigin: mouse;">
+  </a-camera>
+  
+  <a-entity 
+    id="cursor"
+    tap-place-cursor
+    gltf-model="#car-transparent"
+    scale="5 5 5"
+    cubemap-static>
+      <a-plane
+        rotation="-90 0 0"
+        scale="1.6 3.3 1"
+        material="src: #icon; opacity: 0.5; roughness: 0.8; metalness: 0;">
+      </a-plane>
+  </a-entity>
+  
+  <a-entity
+    light="
+      type: directional;
+      intensity: 0.8;
+      castShadow: true;
+      shadowMapHeight:2048;
+      shadowMapWidth:2048;
+      shadowCameraTop: 20;
+      shadowCameraBottom: -20;
+      shadowCameraRight: 20;
+      shadowCameraLeft: -20;
+      target: #model"
+    xrextras-attach="target: model; offset: 8 15 4"
+    position="1 4.3 2.5"
+    shadow>
+  </a-entity>
+
+  <a-light type="ambient" intensity="0.5"></a-light>
+
+  <a-entity
+    id="model"
+    gltf-model="#car"
+    scale="5 5 5"
+    visible="false"
+    shadow="receive: false"
+    gltf-morph="morphtarget: Surprised; value: 0"
+    animation-mixer="clip: Robotics; loop: repeat; crossFadeDuration: 0.4"
+    xrextras-hold-drag
+    xrextras-two-finger-rotate
+    xrextras-pinch-scale
+    cubemap-realtime>
+  </a-entity>
 	</a-scene>
+	
 </body>
