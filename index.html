@@ -1,85 +1,12 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
-<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-<script src="./tap-place-cursor.js"></script>
-<script src="./cubemap-realtime.js"></script>
-<script src="./cubemap-static.js"></script>
-  <meta name="8thwall:package" content="@8thwall.xrextras">
-<meta name="8thwall:package" content="@8thwall.landing-page">
+<head>
+</head>
+<body>
 
-<!-- Other external scripts and meta tags can also be added. -->
-<script src="//cdn.8thwall.com/web/aframe/aframe-extras-6.1.1.min.js"></script>
+<h1>The iframe element</h1>
 
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
-<body style='margin : 0px; overflow: scroll;'>
-  <a-scene xrextras-gesture-detector
-  xrextras-loading
-  xrextras-runtime-error
-  renderer="colorManagement: true"
-  xrweb>
-    <a-assets>
-    <a-asset-item id="car" src="./Robot_arm.glb"></a-asset-item>
-      <a-asset-item id="car-transparent" src="./Robot_arm.glb"></a-asset-item>
-      </a-assets>
-    <a-entity 
-    id="cursor"
-    tap-place-cursor
-    gltf-model="#car-transparent"
-    scale="5 5 5"
-    cubemap-static>
-      <a-plane
-        rotation="-90 0 0"
-        scale="1.6 3.3 1"
-        material="src: #icon; opacity: 0.5; roughness: 0.8; metalness: 0;">
-      </a-plane>
-  </a-entity>
-     <a-camera
-    id="camera"
-    position="0 8 0"
-    cursor="fuse: false; rayOrigin: mouse;">
-  </a-camera>
-    
-  <a-entity
-    light="
-      type: directional;
-      intensity: 0.8;
-      castShadow: true;
-      shadowMapHeight:2048;
-      shadowMapWidth:2048;
-      shadowCameraTop: 20;
-      shadowCameraBottom: -20;
-      shadowCameraRight: 20;
-      shadowCameraLeft: -20;
-      target: #model"
-    xrextras-attach="target: model; offset: 8 15 4"
-    position="1 4.3 2.5"
-    shadow>
-  </a-entity>
+ <iframe innerframe  src="http://xr.eduverse.onpencil.io/webgl-is-2/" style="border:0px #000000 none;" name="Pong: Star Wars Remix" scrolling="no" msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true" allowtransparency="true" frameborder="0" marginheight="px" marginwidth="320px" height="540px" width="960px"></iframe>
 
-  <a-light type="ambient" intensity="0.5"></a-light>
-
-  <a-entity
-    id="model"
-    gltf-model="#car"
-    scale="5 5 5"
-    visible="false"
-    shadow="receive: false"
-    gltf-morph="morphtarget: Surprised; value: 0"
-    animation-mixer="clip: Robotics; loop: repeat; crossFadeDuration: 0.4"
-    xrextras-hold-drag
-    xrextras-two-finger-rotate
-    xrextras-pinch-scale
-    cubemap-realtime>
-  </a-entity>
-
-  <!-- Adding the cantap class allows the ground to be clicked -->
-  <a-box
-    id="ground"
-    scale="1000 2 1000"
-    position="0 -1 0"
-    material="shader: shadow; transparent: true; opacity: 0.4"
-    shadow>
-  </a-box>
-  </a-scene>
 </body>
 </html>
